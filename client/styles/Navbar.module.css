@@ -1,0 +1,103 @@
+.container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    height: 5rem;
+    padding: 0 3rem 0 3rem;
+    position: relative;
+  }
+  
+  .logo {
+    font-size: 1.5rem;
+  }
+
+  .logoLink {
+    display: flex;
+    flex: auto;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    height: auto;
+  }
+  
+  .logoLink:hover {
+    color: #2c99ff;
+  }
+  
+  .leftSide {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  
+  .circle {
+    align-self: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 50px;
+    background: #ff9b25;
+    margin-right: 0.6rem;
+    background: linear-gradient(
+      90deg,
+      rgb(0, 0, 0) 0%,
+      rgb(60, 60, 60) 36%,
+      rgb(164, 164, 164) 61%,
+      rgb(29, 29, 29) 88%,
+      rgb(91, 91, 91) 100%
+    );
+  }
+  
+  .middle {
+    flex-grow: 2;
+    margin-left: 70px;
+  }
+  
+  .rightSide {
+    flex-grow: 1;
+    text-align: right;
+  }
+  .signUp {
+    background: black;
+    width: 10rem;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-weight: 700;
+    font-size: 1rem;
+    height: 40px;
+    margin: 15px auto;
+  }
+  
+  .signIn{
+    background: none;
+    border: none;
+    font-weight: 700;
+    font-size: 1rem;
+    margin-right: 2rem;
+  }
+  
+  .signIn:hover{
+    color: #2c99ff;
+    cursor: pointer;
+  }
+  
+  .signUp:hover {
+    -webkit-transform: translateY(-.5px);
+    transform: translateY(-.5px);
+    cursor: pointer;
+  }
+  
+  .link:hover {
+    color: #2c99ff;
+  }
+  
+  @media only screen and (max-width: 730px), (max-device-width: 300px) {
+    .container {
+      padding: 0 2rem 0 2rem;
+    }
+  
+    .logoLink {
+      font-size: 0.8rem;
+    }
+  }
