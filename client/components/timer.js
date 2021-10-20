@@ -17,7 +17,7 @@ export default function Timer() {
       clearInterval(interval);
     }
     if (seconds <= 0) {
-      setTimerToggle(false);
+      setSeconds(1500);
     }
     return () => clearInterval(interval);
   }, [timerToggle, seconds]);

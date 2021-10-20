@@ -1,0 +1,13 @@
+.container {
+    margin: 3% 0;
+    padding: 5%;
+    height: 75vh;
+    border-radius: 15px;
+    box-shadow: 0 0 10px 3px rgba(199, 199, 199, 0.5);
+}
+
+.containerTitle { 
+    border: 1px solid black;
+    text-align: center;
+    font-weight: 700;
+}

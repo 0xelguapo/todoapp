@@ -4,6 +4,7 @@ import Image from "next/image";
 import styles from "../styles/Home.module.css";
 import Navbar from "../components/navbar.js";
 import Todo from "../components/todo.js";
+import Notes from "../components/notes.js";
 
 export default function Home() {
   return (
@@ -21,10 +22,11 @@ export default function Home() {
           </div>
           <div className={styles.timerContainer}>
             <Timer />
+            <div className={styles.notesContainer}>
+              <Notes />
+            </div>
           </div>
-          <div className={styles.friendsContainer}>
-            Friends
-          </div>
+          <div className={styles.friendsContainer}>Friends</div>
         </div>
       </main>
 
