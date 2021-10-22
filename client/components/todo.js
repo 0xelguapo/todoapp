@@ -10,9 +10,15 @@ export default function Todo() {
     minutes: "",
     completed: false,
   });
+  const [initialTodo, setInitialTodo] = useState({
+    id: uuid(),
+    todo: "Add a todo",
+    minutes: "0",
+    completed: false,
+  });
 
   const [todoArray, setTodoArray] = useState([]);
-  const [showInput, setShowInput] = useState(false);
+  const [showInput, setShowInput] = useState(true);
   const [minus, setMinus] = useState(false);
   const [showCompleted, setShowCompleted] = useState(true);
 
@@ -37,7 +43,6 @@ export default function Todo() {
     });
 
     setTodoArray(updatedTodos);
-    console.log(updatedTodos);
     localStorage.setItem("todos", JSON.stringify(todoArray));
   };
 
@@ -66,6 +71,9 @@ export default function Todo() {
     let todos;
     if (localStorage.getItem("todos") === null) {
       todos = [];
+      todoArray.push(initialTodo);
+      localStorage.setItem("todos", JSON.stringify(todoArray));
+      todos = JSON.parse(localStorage.getItem("todos"));
     } else {
       todos = JSON.parse(localStorage.getItem("todos"));
     }
@@ -73,7 +81,7 @@ export default function Todo() {
     console.log(todos);
   };
 
-  const submitTask = async (e) => {
+  const submitTask = (e) => {
     e.preventDefault();
     setTodoObject({
       ...todoObject,
@@ -92,7 +100,7 @@ export default function Todo() {
       <div className={styles.titleContainer}>
         <h3 className={styles.title}>Task List</h3>
         <div className={styles.plus}>
-          {!minus ? (
+          {!showInput ? (
             <button className={styles.plusButton} onClick={addTodo}>
               <Image src="/plus.svg" width={25} height={25} />
             </button>
@@ -168,8 +176,8 @@ export default function Todo() {
             className={styles.completedButton}
             onClick={() => setShowCompleted(!showCompleted)}
           >
-            {showCompleted ? ('Hide Completed') : ('Show Completed')}
-            <Image src='/expand2.svg' width={15} height={15} />
+            {showCompleted ? "Hide Completed" : "Show Completed"}
+            <Image src="/expand2.svg" width={15} height={15} />
           </button>
         </div>
         {todoArray.map((t) => (

@@ -1,13 +1,169 @@
 .container {
-    margin: 3% 0;
-    padding: 5%;
-    height: 75vh;
-    border-radius: 15px;
-    box-shadow: 0 0 10px 3px rgba(199, 199, 199, 0.5);
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 2% 5%;
+  height: 100vh;
+  border-radius: 15px;
+  background: white;
+  border: 1px solid rgba(187, 187, 187, 0.562);
+  overflow-y: scroll;
+  scroll-behavior: auto;
 }
 
-.containerTitle { 
-    border: 1px solid black;
-    text-align: center;
-    font-weight: 700;
+.containerTitle {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 3rem;
+  padding: 0 1%;
+  text-align: center;
+  font-weight: 700;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.plusButton {
+  background: none;
+  padding: 2% 0;
+  border: 0;
+  width: 100%;
+  border-radius: 10px;
+}
+
+.plusButton:hover {
+  cursor: pointer;
+  box-shadow: 0 0 3px 3px rgba(227, 227, 227, 0.201);
+}
+
+.minus {
+  width: 30px;
+  height: 7px;
+  background: black;
+  border-radius: 10px;
+}
+
+.minus:hover {
+  cursor: pointer;
+}
+
+.notesContainer {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.create {
+  border: 1px solid rgb(187, 187, 187);
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  min-height: 12rem;
+  width: 100%;
+  padding: 5% 5% 0 5%;
+  margin-bottom: 20px;
+}
+
+.input {
+  width: 70%;
+  margin-bottom: 1rem;
+  border-radius: 7px;
+  height: 1.5rem;
+  padding: 0 3%;
+  border: 1px solid rgb(187, 187, 187);
+}
+
+.input:focus {
+  outline: none;
+}
+
+.textarea {
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-weight: 400;
+  border-radius: 10px;
+  resize: none;
+  width: 100%;
+  padding: 2% 3%;
+  border: 1px solid rgb(187, 187, 187);
+}
+
+.textarea:focus {
+  outline: none;
+}
+
+.buttonContainer {
+  text-align: right;
+  padding: 3% 0;
+}
+
+.cancel {
+  border: none;
+  background: none;
+  margin-right: 10px;
+}
+
+.save {
+  border-radius: 10px;
+  border: none;
+  width: 75px;
+  height: 2rem;
+  background: black;
+  color: white;
+  font-weight: 600;
+}
+
+.save:hover {
+  opacity: 80%;
+}
+
+.save:hover,
+.cancel:hover {
+  cursor: pointer;
+}
+
+.submittedNotes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 10px;
+  padding-bottom: 5%;
+  width: 100%;
+  height: auto;
+}
+
+.note {
+  border: 1px solid rgba(130, 130, 130, 0.562);
+  height: 11rem;
+  width: 200px;
+  flex-grow: 1;
+  border-radius: 10px;
+}
+
+.noteTitleContainer {
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+  height: 2rem;
+  border-bottom: 1px solid rgba(187, 187, 187, 0.562);
+  padding: 0 3%;
+}
+
+.noteTitle {
+  flex: 2;
+}
+
+.delete {
+  display: flex;
+  flex: 0.2;
+  justify-content: center;
+}
+
+.delete:hover {
+  cursor: pointer;
+}
+
+.noteBody {
+  padding: 2% 3%;
 }

@@ -5,6 +5,7 @@ import styles from "../styles/Home.module.css";
 import Navbar from "../components/navbar.js";
 import Todo from "../components/todo.js";
 import Notes from "../components/notes.js";
+import DayPlanner from "../components/dayplanner.js";
 
 export default function Home() {
   return (
@@ -17,16 +18,16 @@ export default function Home() {
       <Navbar />
       <main className={styles.container}>
         <div className={styles.componentsContainer}>
+          <div className={styles.timerContainer}>
+            <Timer />
+            <DayPlanner />
+          </div>
           <div className={styles.todoContainer}>
             <Todo />
           </div>
-          <div className={styles.timerContainer}>
-            <Timer />
-            <div className={styles.notesContainer}>
-              <Notes />
-            </div>
+          <div className={styles.friendsContainer}>
+            <Notes />
           </div>
-          <div className={styles.friendsContainer}>Friends</div>
         </div>
       </main>
 

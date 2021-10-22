@@ -3,9 +3,10 @@
     flex-direction: row;
     flex-wrap: wrap;
     align-items: center;
-    height: 5rem;
+    height: 4rem;
     padding: 0 3rem 0 3rem;
     position: relative;
+    background: #f6f6f6;
   }
   
   .logo {
@@ -36,7 +37,6 @@
     width: 30px;
     height: 30px;
     border-radius: 50px;
-    background: #ff9b25;
     margin-right: 0.6rem;
     background: linear-gradient(
       90deg,
